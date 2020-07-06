@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="col-12 text-center">
+            <h3 class="navbar-text text-white">Weather Dashboard</h3>
+        </div>
+    </nav>
+    <header class="row">
+        <!-- First 2 columns- search for a city, and render search history results, if applicable-->
+        <div class="col-2">
+            <form>
+                <label for="citySearch" style="font-weight: bold; font-size: 20px;">Search for a City:</label>
+                <input type="text" name="citySearch" id="citySearch">
+                <button type="submit" id="search" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </form>
+            <form>
+                <div class="card" style="width: 12rem; margin-top: 20px;">
+                    <ul class="list-group list-group-flush" id="searchHistory">
+                        <li class="list-group-item btn">
+
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <!-- Last columns- render current weather followed by 5-day forecast-->
+        <main class="col-10">
+            <div id="currentWeather">
+                <h3 id="cityName"></h3>
+                <p id="temp"></p>
+                <p id="humidity"></p>
+                <p id="windSpeed"></p>
+                <p id="uvIndexText"><span id="uvIndexValue"></span></p>
+            </div>
+            <div id="fiveDayForecast">
+                <h3 style="font-weight: bold; margin-top: 15px;">5-Day Forecast:</h3>
+                <div class="row">
+                    <div id="day1Forecast" class="card text-white bg-primary mb-3 col-2" style="max-width: 12rem; margin: 20px;">
+                        <div class="card-body">
+                            <h5 id="day1Date"></h5>
+                            <p id="day1Temp"></p>
+                            <p id="day1Humidity"></p>
+                        </div>
+                    </div>
+                    <div id="day2Forecast" class="card text-white bg-primary mb-3 col-2" style="max-width: 12rem; margin: 20px">
+                        <div class="card-body">
+                            <h5 id="day2Date"></h5>
+                            <p id="day2Temp"></p>
+                            <p id="day2Humidity"></p>
+                        </div>
+                    </div>
+                    <div id="day3Forecast" class="card text-white bg-primary mb-3 col-2" style="max-width: 12rem; margin: 20px">
+                        <div class="card-body">
+                            <h5 id="day3Date"></h5>
+                            <p id="day3Temp"></p>
+                            <p id="day3Humidity"></p>
+                        </div>
+                    </div>
+                    <div id="day4Forecast" class="card text-white bg-primary mb-3 col-2" style="max-width: 12rem; margin: 20px">
+                        <div class="card-body">
+                            <h5 id="day4Date"></h5>
+                            <p id="day4Temp"></p>
+                            <p id="day4Humidity"></p>
+                        </div>
+                    </div>
+                    <div id="day5Forecast" class="card text-white bg-primary mb-3 col-2" style="max-width: 12rem; margin: 20px">
+                        <div class="card-body">
+                            <h5 id="day5Date"></h5>
+                            <p id="day5Temp"></p>
+                            <p id="day5Humidity"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
