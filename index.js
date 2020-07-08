@@ -56,7 +56,7 @@ $(document).ready(function() {
                 $("#uvIndexValue").text(response[0].value);
                 $("#uvIndexValue").removeClass();
 
-                // Change the color of the 'button' based on the UV index value
+                // Make the uvIndexvalue a 'button' and change the color of the button based on the value itself
                 if (response[0].value < 3)
                     $("#uvIndexValue").addClass("btn-sm text-white").attr("style", "background-color: green;");
                 if (response[0].value >= 3 && response[0].value < 6)
