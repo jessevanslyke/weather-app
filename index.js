@@ -150,12 +150,14 @@ $(document).ready(function() {
     $("#search").on("click", function(event) {
         event.preventDefault();
 
-        if ( $("#cityName").val() === "")
+        if ( $("#citySearch").val() === "")
             return;
         
-        city = $("#cityName").val();
+        city = $("#citySearch").val();
 
+        // Add the city to the history results
         updateHistory(city);
+        // Get all weather details for this city
         getWeatherDetails(city);
     })
 
